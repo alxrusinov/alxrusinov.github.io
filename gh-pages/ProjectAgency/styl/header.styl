@@ -1,0 +1,93 @@
+.b-header
+	min-height 500px
+	padding-top 43px
+	padding-bottom 57px
+	&_home /*homepage mod*/
+		background url('../img/homepage/header.jpg')
+		background-size cover
+	&_about /*about mod*/
+		background url('../img/about/header-home.jpg')
+		background-size cover
+	&_blur /*blur mod*/
+		position relative
+		&::before
+			position absolute
+			top 0
+			left 0
+			content ''
+			display block
+			width 100%
+			height 100%
+			background-color alpha(white, 0.8)
+	&Homepage
+		&__title
+			position relative
+			padding 15px 35px
+			color  $d-gray
+			font-size 2.85rem
+			upper()
+			font-weight 700
+			line-height 1
+			text-align center
+			border-style solid
+			border-width 10px
+			border-color  $d-gray
+			margin-bottom 30px
+			&::before
+				display -webkit-flex
+				display -moz-flex
+				display -ms-flex
+				display -o-flex
+				display flex
+				justify-content center
+				align-items center
+				content "we're"
+				position absolute
+				width 99px
+				height 30px
+				top (-@height - 10px)
+				left 50%
+				transform translateX(-50%)
+				background-color $green
+				font-size 1rem
+				font-weight 700
+				line-height 2.667
+				text-align center
+		&__txt
+			font-size 1rem
+			font-weight 400
+			line-height 1.5
+			text-align center
+			max-width 90%
+			margin-bottom 125px
+	&Footer
+		margin-bottom -158px
+		
+	.b-headerTitle
+		&__title
+			color alpha($d-gray, .8)
+			font-size 2.25rem
+			font-weight 700
+			line-height 1.333
+			text-align center
+			upper()
+		&__link
+			link(alpha($d-gray, .8))
+			font-size 0.875rem
+			font-weight 700
+			line-height 3.429
+			text-align center
+			upper()
+			transition all 0.2s ease
+			&:hover
+				color $d-gray
+			&_slash
+				&::after
+					content '/'
+					color alpha($d-gray, .8)
+					font-size 0.875rem
+					font-weight 700
+					margin 0 5px
+				
+				
+			

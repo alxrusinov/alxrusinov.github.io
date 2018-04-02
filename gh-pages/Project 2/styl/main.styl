@@ -1,0 +1,173 @@
+//Import stylus files
+@import 'fonts.styl' /*шрифты*/
+@import 'vars.styl'	/*переменные*/
+@import 'mixins.styl' /*миксины*/
+
+//Main
+body
+	font-family Roboto
+.page
+	max-width 1366px
+	margin 0 auto
+.header
+	&-left
+		background-image url('../img/header-bg.png')
+		background-size cover
+	&__nav
+		width 100%
+		height 100%
+		padding 50px 80px 0 55px
+		background-color $light
+		hidden
+		.fa
+			text-color($d-gray, 0.9)
+			font-size 33px
+			font-weight 100
+	&__title
+		font-weight 500
+		line-height 1.652
+		text-align left
+		margin-top 50px
+		margin-bottom 45px
+	&__txt
+		color $D-gray
+		font-size 1.124rem
+		line-height 1.78
+		text-align left
+		font-weight 300
+.main
+	.features
+		background-image url('../img/services-bg.png')
+		background-size cover
+		padding 65px 70px 65px 60px
+		height 100%
+	.review
+		color white
+		&__title
+			font-weight 300
+			line-height 1.4
+			text-align left
+			letter-spacing 2px
+			margin-bottom 25px
+			&_black
+				black()
+		&__txt
+			font-size 0.973rem
+			font-weight 300
+			line-height 1.798
+			text-align left
+		&:nth-child(1), &:nth-child(2)
+			.review__txt
+				margin-bottom 60px		
+	.best-wrap
+		flex-grow 1
+		background-image url('../img/best-bg.png')
+		background-size cover
+		padding 65px 180px 65px 55px
+		width 100%
+		.best
+			&__title
+				@extend .main .review__title
+			&__txt
+				@extend .main .review__txt
+				text-color($d-gray, 0.9)
+				letter-spacing 1px
+				margin-bottom 50px
+			a
+				btn-out()
+				filter opacity(90%)
+	.dummy-wrap
+		flex-grow 1
+		background-image url('../img/dummy-bg.png')
+		background-size cover
+		padding 65px 180px 65px 55px
+		color white
+		.dummy
+			&__title
+				@extend .main .review__title
+			&__txt
+				@extend .main .review__txt
+				letter-spacing 1px
+				margin-bottom 50px
+			a
+				btn-out()
+.footer
+	&-left
+		background-image: url('../img/footer-left-bg.png')
+		background-size cover
+		width 100%
+		height 100%
+		padding 75px 75px 70px 48px
+		&__title
+			color  #ffffff
+			font-size 2.813rem
+			font-weight 300
+			line-height 1.467
+			text-align left
+			&_black
+				black()
+		&__logo
+			.footer-left__img
+				margin-bottom 2rem
+			.footer-left__descr-title
+				color white
+				font-size 2.625rem
+				font-weight 900
+				line-height 1.571
+				text-align left
+				margin 0
+			.footer-left__descr-txt
+				color white
+				font-size 1.036rem
+				font-weight 300
+				line-height 3.983
+				text-align left
+				margin 0
+	&-right
+		background-image: url('../img/footer-right-bg.png')
+		background-size cover
+		padding pt = 65px 0 75px 54px
+		&__title
+			color white
+			font-size 2.813rem
+			font-weight 300
+			line-height 1.467
+			text-align left
+			margin-bottom (pt - 30px)
+			&_black
+				black()
+		&__form
+			margin-bottom 5.875rem
+			input
+				&::placeholder
+					color alpha(white, 0.9)
+					font-size 1.036rem
+					font-weight 300
+					line-height 1.931
+					text-align left
+			textarea
+				height 10rem
+				&::placeholder
+					color alpha(white, 0.9)
+					font-size 1.036rem
+					font-weight 300
+					line-height 1.931
+					text-align left
+		&-social
+			&__txt
+				color  #fff
+				font-size 1.036rem
+				font-weight 300
+				line-height 1.931
+				text-align left
+				letter-spacing 1px
+			&__icons
+				font-size 2.8125rem
+				margin-top 1.375rem
+				margin-bottom 3rem
+				.fa-facebook-square
+					color alpha($blue, 0.9)
+				.fa-dribbble-square
+					color alpha($red, 0.9)
+				.fa-twitter-square
+					color alpha($l-blue, 0.9)

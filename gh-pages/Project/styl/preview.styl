@@ -1,0 +1,162 @@
+.b-preview
+    background-color #2b2e31
+    font-family OpenSans
+    padding 60px 0
+    &Block
+        display flex
+        justify-content space-between
+        background-color #232628
+        @media (max-width 768px)
+            flex-direction column
+            align-items center
+        &__wrap
+            position relative
+            display flex
+            &::before
+                position absolute
+                display block
+                content ''
+                top 0
+                left 0
+                background-image url('../img/plus.png')
+                z-index 10
+                width 44px
+                height 44px
+        &Insert 
+            width 90%
+            height 1px
+            border-bottom 1px solid rgba(255, 255, 255, 0.06)
+    &Article 
+        padding 30px 76px 30px 30px
+        @media (max-width 768px)
+            padding 10px
+        &__title
+            font-size 1.375rem
+            font-weight 700
+            color white
+            text-align left
+            line-height 1.15
+            letter-spacing 1px
+            upper()
+            @media (max-width 768px)
+                text-align center
+        &__subtitle
+            font-size 1.25rem
+            font-weight 400
+            text-align left
+            color #c33737 
+            line-height 1.15
+            margin-bottom 20px
+            @media (max-width 768px)
+                text-align center
+        &__txt
+            color  #6d6f71
+            font-size 0.938rem
+            font-weight 400
+            line-height 1.333
+            text-align left
+            margin-bottom 25px
+            @media (max-width 768px)
+                text-align justify
+        &__btn
+            display inline-flex
+            justify-content space-between
+            align-items center
+            padding 10px
+            link(white)
+            upper()
+            font-weight 800
+            border 1px solid #4b4d4f
+            &:hover
+                filter opacity(0.5)
+            &:visited
+                filter opacity(0.3)
+        &__icon
+            color  #c33737
+            font-size 0.875rem
+            margin-left 5px
+    &Form
+        padding 40px 30px
+        background-color #c33737
+        position relative
+        @media (max-width 1200px)
+            flex-grow 1
+        &::before
+            position absolute
+            display block
+            content ''
+            width 40px
+            height 100%
+            top 0
+            left -40px
+            background-color #b02525
+            transform-origin top right
+            transform skewY(30deg)
+            @media (max-width 1200px)
+                display none
+        &__title
+            color white
+            font-size 1.375rem
+            font-weight 700
+            text-align left
+            upper()
+            margin-bottom 20px
+        &__form
+            display flex
+            flex-direction column
+        &__group
+            display flex
+            align-items center
+            margin-bottom 20px
+            border 1px solid #d66767
+        &__input
+            font-family OpenSans
+            font-size 0.875rem
+            flex-grow 1
+            background-color transparent
+            padding 12px
+            border none
+            color white
+
+            &::placeholder
+                color #d66767
+                font-size 0.938rem
+        &__icon
+            display flex
+            justify-content center
+            align-items center
+            padding 12px
+            color #d66767
+            font-size 0.875rem
+            border-left 1px solid #d66767
+            &_abs
+                position absolute
+                border-bottom 1px solid #d66767
+                top 0
+                right 0
+        &__message
+            display flex
+            position relative
+            margin-bottom 20px
+        &__textarea
+            font-family OpenSans
+            font-size 0.875rem
+            width 100%
+            min-height 76px
+            padding 12px 38px 12px 12px
+            border 1px solid #d66767
+            background-color transparent
+            color white
+            &::placeholder
+                color #d66767
+                font-size 0.938rem
+        &__button
+            padding 12px 18px
+            border 1px solid #d66767
+            background-color transparent
+            color white
+            font-size 0.875rem
+            font-weight 700
+            line-height 1.429
+            upper()
+        

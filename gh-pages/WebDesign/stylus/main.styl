@@ -1,0 +1,311 @@
+@import 'var.styl'
+@import 'mixins.styl'
+@import 'fonts.styl'
+
+html
+	box-sizing border-box
+
+*, *::before, *::after
+	box-sizing inherit 
+
+.page
+	width 100%
+	max-width 1920px
+	margin 0 auto
+	
+.header
+	width 100%
+	max-height 1280px
+	background-image url('../imgs/bg-header.jpg')
+	padding 80px 100px 50px 100px
+	.navbar	
+		display grid
+		justify-content space-between
+		align-items center
+		grid-template-columns 2fr 1fr 2fr
+		padding-bottom 80px
+		border-bottom 1px solid alpha($white, 0.24)
+		margin-bottom 230px
+		@media screen and (max-width: 960px)
+			grid-template-columns 1fr 1fr 70px
+		@media screen and (max-width: 768px)
+			grid-template-columns 1fr 5fr 1fr
+			margin-bottom 150px
+			padding-bottom 40px
+		&__link
+			display block
+			justify-self start
+			.navbar__logo
+				max-width 100%
+				height auto
+			&:hover .navbar__logo
+				transform scale(1.2)
+				filter opacity(50%)
+				transition all 0.2s ease-in
+				cursor pointer
+		&-nav
+			display -webkit-flex
+			display -moz-flex
+			display -ms-flex
+			display -o-flex
+			display flex
+			justify-content space-between
+			@media screen and (max-width: 960px)
+				display none
+			&__link
+				text-decoration none
+				font-family $mon
+				font-size 0.875rem
+				font-weight 700
+				color $white
+				upper()
+				margin 0 5px
+				text-shadow 1px 1px 1px #cbd0cc
+				&:hover
+					transform scale(1.2, 1.2) translateY(-5px)
+					transition all 0.2s ease-in
+		form
+			justify-self end
+			@media screen and (max-width: 768px)
+				justify-self center
+			.navbar__search
+				background-color transparent
+				border none
+				border-bottom 1px solid alpha($white, 0.24)
+				margin-right 10px
+			.fa
+				font-size 1.25rem
+				&:hover	
+					transform scale(1.2) translateY(-5px)
+					transition all 0.2s ease-in
+					cursor pointer
+		.btn-menu
+			width 34px
+			background-color transparent
+			border none
+			display none
+			@media screen and (max-width: 960px)
+				display block
+				justify-self end
+			&:hover
+				opacity 0.5
+				cursor pointer
+			img
+				width 100%
+	&-title
+		margin 0 auto
+		max-width 735px
+		&__title
+			font-family $play
+			color $white
+			font-size 8.75rem
+			font-weight 400
+			margin-bottom 35px
+			text-align center
+			text-shadow 2px 2px 3px $light-gray
+		&__txt
+			max-width 545px
+			margin 0 auto 100px
+			font-family $mon
+			color $white
+			font-size 1.15rem
+			font-weight 300
+			line-height 1.7
+			text-align center
+		&__link
+			display block
+			position relative
+			width 10.25rem
+			padding 18px 46px
+			margin 0 auto
+			border-radius 50px
+			font-family $mon
+			color $white
+			font-size 0.875rem
+			font-weight 700
+			text-align center
+			upper()
+			text-decoration none
+			background-color $pink
+			margin-bottom 295px
+			&:hover
+				transform scale(1.1)
+				transition all 0.3s ease
+			&:hover::before, &:hover::after
+				filter opacity(20%)
+				transition all 0.3s ease			
+			@media screen and (max-width: 960px)
+				margin-bottom 100px
+			&::before
+				content ''
+				display block
+				width 180px
+				height 1px
+				top 50%
+				left -@width
+				position absolute
+				background-color $pink
+			&::after
+				content ''
+				display block
+				width 180px
+				height 1px
+				top 50%
+				right -@width
+				position absolute
+				background-color $pink
+		&__play	
+			display block
+			position relative
+			margin 0 auto
+			text-align center
+			.fa
+				font-size 5.125rem
+				color alpha($white, 0.8)
+				&:hover
+					transform rotate(360deg)
+					transition all 0.5s ease-in
+			&::before
+				content ''
+				display block
+				width 1px
+				height 190px
+				top -@height - 55px
+				left 49.8%
+				position absolute
+				background-color $pink
+				@media screen and (max-width: 960px)
+					display none
+			&::after
+				content ''
+				display block
+				width 1px
+				height 190px
+				top -@height - 35px
+				left 50.3%
+				position absolute
+				background-color $pink
+				@media screen and (max-width: 960px)
+					display none
+				
+.preview
+	width 100%
+	display grid
+	grid-template-columns repeat(4, 1fr)
+	grid-template-rows 500px
+	grid-template-areas:
+		"first second third fourth"
+	@media screen and (max-width: 768px)
+		grid-template-columns repeat(2, 1fr)
+		grid-template-rows repeat(2, 500px)
+		grid-template-areas: "first second" "third fourth"
+	&__item
+		display -webkit-flex
+		display -moz-flex
+		display -ms-flex
+		display -o-flex
+		display flex
+		flex-direction column
+		justify-content flex-end
+		align-items center
+		padding-bottom 110px
+		&:hover
+			filter grayscale(0.9)
+			transition all 0.2s ease
+		&:nth-child(1)
+			grid-area first
+			background-image url('../imgs/row/img-1.png')
+		&:nth-child(2)
+			grid-area second
+			background-image url('../imgs/row/img-2.png')
+		&:nth-child(3)
+			grid-area third
+			background-image url('../imgs/row/img-3.png')
+		&:nth-child(4)
+			grid-area fourth
+			background-image url('../imgs/row/img-4.png')
+	&__title
+		font-family $mon
+		color alpha($white, 0.8)
+		font-size 1rem
+		font-weight 600
+		line-height 1.667
+		text-align center
+		upper()
+	&__txt
+		font-family Georgia
+		color alpha($white, 0.8)
+		font-size 1rem
+		font-style italic
+		line-height 1.667
+		text-align center
+.footer
+	background-color $white
+	&__wrapper
+		max-width 79.35%
+		padding 120px
+		margin 0 auto
+		display grid
+		grid-template-columns repeat(3, 3fr) 4fr
+		@media screen and (max-width: 960px)
+			max-width 95%
+			padding 120px 70px
+			grid-template-columns repeat(3, 1fr)
+			grid-row-gap 30px
+		@media screen and (max-width: 768px)
+			padding 20px
+			grid-template-columns repeat(3, 1fr)
+			grid-row-gap 20px
+	&-block
+		display -webkit-flex
+		display -moz-flex
+		display -ms-flex
+		display -o-flex
+		display flex
+		flex-direction column
+		justify-content space-between
+		@media screen and (max-width: 960px)
+			justify-content flex-start
+			align-items center
+			&:last-child
+				grid-column 1/4
+		&__title
+			font-family $mon
+			color $dark
+			font-size 0.75rem
+			font-weight 700
+			line-height 1.857
+			text-align left
+			upper()
+			margin-bottom 25px
+		&__item
+			&:hover
+				text-decoration underline
+				filter opacity(60%)
+				translate all 0.2s ease
+		&__link
+			font-family Georgia
+			font-size 0.775rem
+			color $light-gray
+			font-style italic
+			line-height 1.857
+			text-align left
+			text-decoration none
+		&__txt
+			font-family Georgia
+			color $gray
+			font-size 0.75rem
+			font-style italic
+			line-height 1.857
+			text-align left
+	&__copy
+		padding 35px 0
+		background-color $black
+		font-family Georgia
+		color $gray
+		font-size 0.75rem
+		font-style italic
+		line-height 1.857
+		text-align center
+		@media screen and (max-width: 768px)
+			padding 20px 0

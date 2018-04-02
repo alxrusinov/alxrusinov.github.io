@@ -1,0 +1,103 @@
+.b-present
+    padding 60px 0
+    background-color #2b2e31
+    font-family OpenSans
+.b-news
+    &__title
+        color white
+        font-size 1.375rem
+        font-weight 700
+        text-align left
+        upper()
+        margin-bottom 30px
+    &__item
+        display flex
+        justify-content space-between
+        margin-bottom 38px
+    &__date
+        flex 0 0 auto
+        display flex
+        flex-direction column
+        justify-content center
+        align-items center
+        width 70px
+        height @width 
+        background-color #c33737
+        border-radius 50%
+        color white
+        font-size 0.875rem
+        upper()
+        font-weight 300
+        line-height 1.5
+        margin-right 30px
+    &__txt
+        color  #727272
+        font-size 0.875rem
+        font-weight 300
+        text-align left
+        line-height 1.25
+        margin-bottom 12px
+    &__link
+        link(#c33737)
+        font-size 0.875rem
+        font-weight 400
+        text-align left
+        transition all 0.2s ease
+        &:hover
+            filter opacity(0.5)
+    &__icon
+        color white
+        font-size 0.5rem
+        font-weight 700
+        margin-right 5px
+.b-fromBlog
+    &__title
+        @extend .b-news__title
+    &__item
+        padding-bottom 30px
+        margin-bottom 30px
+        box-shadow 0px 1px 0px 0px rgba(255, 255, 255, 0.06)
+        line-height 1.25
+    &__txt
+        color  #727272
+        font-size 0.875rem
+        font-weight 300
+        text-align left
+        margin-bottom 8px
+    &__data
+        display flex
+        justify-content space-between
+        color white
+        font-size 0.75rem
+    &__icon
+        color #c33737
+        margin-right 5px
+.b-linkArticles
+    &__title
+        @extend .b-news__title
+    &__txt
+        color  #727272
+        font-size 0.875rem
+        font-weight 300
+        text-align left
+        line-height 1.25
+        margin-bottom 30px
+    &__item
+        box-shadow 0px 1px 0px 0px rgba(255, 255, 255, 0.06)
+        &:last-child
+            box-shadow none 
+    &__icon
+        color  #c33737
+        font-size 0.875rem
+        line-height 2.857
+        text-align left
+        margin-right 17px
+    &__link
+        link(#727272)
+        font-size 0.875rem
+        font-weight 300
+        line-height 2.857
+        text-align left
+        transition all 0.2s ease
+        &:hover
+            color  #c33737

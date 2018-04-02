@@ -1,0 +1,46 @@
+.b-navbar
+    padding 50px 0
+    background-color #2b2e31
+    font-family OpenSans
+.b-logo
+    display inline-block
+    text-align center
+    &__link
+        width 100%
+        height 100%
+        padding 14px 20px
+        background-color #c33737
+        link(white)
+        font-size 1.625rem
+        font-weight 700
+        upper()
+        box-shadow 6px 8px 0px 0px rgba(0, 0, 0, 0.66)
+        transition all 0.2s ease
+        &:hover
+            filter opacity(0.5)
+
+.b-nav
+    max-width 100%
+    display flex
+    border 1px solid #484b4c
+    box-shadow 0px 1px 0px 0px rgba(0, 0, 0, 0.33)
+    &__link
+        /* max-width 100% */
+        flex 1 1 auto
+        display flex
+        justify-content center
+        align-items center
+        padding 15px 20px
+        link(#585858)
+        font-size 1rem
+        font-weight 300
+        text-align left
+        font-variant small-caps
+        border-right 1px solid black
+        box-shadow 1px 0px 0px 0px rgba(255, 255, 255, 0.06)
+        transition all 0.2s ease
+        &:last-child
+            border-right none
+        &:hover
+            color #c33737
+            font-weight 300

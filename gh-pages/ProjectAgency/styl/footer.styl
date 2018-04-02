@@ -1,0 +1,104 @@
+.b-contacts
+	padding 50px 0
+	background-color $green
+	
+.b-workUs
+	color white
+	&__title
+		font-size 1.875rem
+		font-weight 700
+		line-height 1.6
+		text-align left
+		upper()
+		margin-bottom 30px
+		
+.b-formFooter
+	padding 20px 25px
+	background-color white
+	&__title
+		color $d-gray
+		font-size 1.5rem
+		font-weight 700
+		line-height 1.5
+		text-align left
+		upper()
+		margin-bottom 15px
+	&__subtitle
+		color $gray
+		font-size 1rem
+		font-weight 400
+		line-height 1.5
+		text-align left
+		margin-bottom 30px
+	&__input
+		padding 20px 0
+		border-style solid
+		border-width 1px
+		border-color  alpha($gray, 0.5)
+		background-color  white
+		flex-grow 1
+		&::placeholder
+			color $light
+			font-size 0.75rem
+			font-weight 700
+			line-height 4
+			text-align left
+			text-indent 20px
+			upper()
+	&__submit
+		border 1px solid $green
+		flex-grow auto
+	&__block
+		display -webkit-flex
+		display -moz-flex
+		display -ms-flex
+		display -o-flex
+		display flex
+
+.b-footerSub
+	padding 50px 0
+	background-color white
+	&Menu
+		display -webkit-flex
+		display -moz-flex
+		display -ms-flex
+		display -o-flex
+		display flex
+		justify-content space-between
+		
+		&__link
+			link($l-gray)
+			upper()
+			font-size 0.875rem
+			font-weight 400
+			line-height 3.429
+			text-align left
+			transition all 0.2s ease
+			&:hover
+				transform translateY(-5px)
+				border-bottom solid 1px $l-gray
+				color $d-gray
+				
+.b-footerSubSocial
+	&__copy
+		color $l-gray
+		font-size 0.875rem
+		font-weight 400
+		line-height 3.429
+		text-align right
+		upper()
+	&__icons
+		display -webkit-flex
+		display -moz-flex
+		display -ms-flex
+		display -o-flex
+		display flex
+		justify-content flex-end
+	&__link
+		link(gray)
+		font-size 1.125rem
+		font-weight 400
+		line-height 2.667
+		text-align right
+		margin-left 15px
+	
